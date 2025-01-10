@@ -1,0 +1,163 @@
+package project;
+
+//import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.io.FileWriter;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+
+public class Final extends JFrame 
+{
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Final frame = new Final();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Final() {
+		JFrame f2=new JFrame();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 631, 508);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(240, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Passanger Details");
+		lblNewLabel.setForeground(new Color(0, 0, 255));
+		lblNewLabel.setFont(new Font("Modern No. 20", Font.BOLD, 26));
+		lblNewLabel.setBounds(206, 11, 214, 32);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Title:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_1.setBounds(10, 80, 46, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		String s1[]= {"","Mr","Mrs","Miss","Master"};
+		
+		JComboBox comboBox = new JComboBox(s1);
+		comboBox.setBackground(new Color(255, 255, 255));
+		comboBox.setBounds(66, 80, 77, 20);
+		contentPane.add(comboBox);
+		
+		JLabel lblFirstName = new JLabel("Full Name:");
+		lblFirstName.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblFirstName.setBounds(10, 134, 94, 26);
+		contentPane.add(lblFirstName);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(255, 255, 255));
+		textField.setBounds(113, 134, 94, 26);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("----------------------------------------------------------------------------------------------------------------------------------------------------------");
+		lblNewLabel_2.setBounds(0, 171, 628, 32);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblContactDetails = new JLabel("Contact Details:");
+		lblContactDetails.setFont(new Font("Modern No. 20", Font.PLAIN, 23));
+		lblContactDetails.setBounds(10, 210, 177, 26);
+		contentPane.add(lblContactDetails);
+		
+		JLabel lblContactNumber = new JLabel("Contact Number:");
+		lblContactNumber.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblContactNumber.setBounds(10, 271, 177, 26);
+		contentPane.add(lblContactNumber);
+		
+		textField_1 = new JTextField();
+		textField_1.setBackground(new Color(255, 255, 255));
+		textField_1.setColumns(10);
+		textField_1.setBounds(156, 271, 116, 26);
+		contentPane.add(textField_1);
+		
+		JLabel lblEmailId = new JLabel("Email ID:");
+		lblEmailId.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblEmailId.setBounds(10, 325, 85, 26);
+		contentPane.add(lblEmailId);
+		
+		textField_2 = new JTextField();
+		textField_2.setBackground(new Color(255, 255, 255));
+		textField_2.setColumns(10);
+		textField_2.setBounds(113, 328, 159, 26);
+		contentPane.add(textField_2);
+		
+		JButton btnNewButton = new JButton("Book Flight");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				String s1=comboBox.getSelectedItem()+"";
+				String s2=textField.getText()+"";
+				String s3=textField_1.getText()+"";
+				String s4=textField_2.getText()+"";				
+				
+				if (e.getSource() == btnNewButton) 
+				{ 
+					try 
+					{ 						
+						FileWriter w = new FileWriter("C:\\Users\\rutvi\\OneDrive\\Desktop\\OOPM Mini Project\\project\\Flight Details.csv",true); 						
+						w.write(s1+","); 
+						w.write(s2+","); 
+						w.write(s3+","); 
+						w.write(s4+"\n"); 				 
+						w.close(); 
+					} 
+					catch (Exception ae) 
+					{ 
+						System.out.println(ae); 
+					} 
+				} 
+				JOptionPane.showMessageDialog(f2,"Your tickets have been booked successfully");
+				JOptionPane.showMessageDialog(f2,"Tickets Will be emailed you very soon..");
+				JOptionPane.showMessageDialog(f2,"Thank You");
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton.setBounds(218, 395, 160, 63);
+		contentPane.add(btnNewButton);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("C:\\Users\\rutvi\\OneDrive\\Desktop\\New folder (3)\\images (1).jpeg"));
+		label.setBounds(0, -23, 615, 469);
+		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setIcon(new ImageIcon("C:\\Users\\rutvi\\OneDrive\\Desktop\\New folder (3)\\images (1) cropped.jpeg"));
+		label_1.setBounds(0, 431, 615, 38);
+		contentPane.add(label_1);
+	}
+}

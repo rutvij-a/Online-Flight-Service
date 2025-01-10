@@ -1,0 +1,81 @@
+package project;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
+public class Project {
+
+	private JFrame frame;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Project window = new Project();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Project() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblWelcomeToAirline = new JLabel("Welcome to Airline Service");
+		lblWelcomeToAirline.setBounds(151, 0, 203, 39);
+		frame.getContentPane().add(lblWelcomeToAirline);
+		
+		JLabel lblFrom = new JLabel("From:");
+		lblFrom.setBounds(26, 70, 46, 29);
+		frame.getContentPane().add(lblFrom);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(69, 70, 90, 29);
+		frame.getContentPane().add(comboBox);
+		
+		JLabel lblTo = new JLabel("To:");
+		lblTo.setBounds(265, 70, 46, 29);
+		frame.getContentPane().add(lblTo);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBounds(297, 70, 90, 29);
+		frame.getContentPane().add(comboBox_1);
+		
+		JLabel lblDeprtureDate = new JLabel("Deprture Date:");
+		lblDeprtureDate.setBounds(26, 130, 80, 29);
+		frame.getContentPane().add(lblDeprtureDate);
+		
+		textField = new JTextField();
+		textField.setBounds(101, 134, 86, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblPassangers = new JLabel("Passangers:");
+		lblPassangers.setBounds(26, 170, 80, 20);
+		frame.getContentPane().add(lblPassangers);
+	}
+}

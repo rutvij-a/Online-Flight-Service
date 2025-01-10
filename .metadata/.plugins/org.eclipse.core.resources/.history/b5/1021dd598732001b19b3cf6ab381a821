@@ -1,0 +1,315 @@
+package project;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JScrollPane;
+import java.awt.Color;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JRadioButton;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.UIManager;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class details extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					details frame = new details();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public details() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 632, 629);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(240, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Depart Time");
+		lblNewLabel.setBounds(5, 9, 121, 48);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblDuration = new JLabel("Duration");
+		lblDuration.setBounds(126, 9, 121, 48);
+		lblDuration.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblDuration);
+		
+		JLabel lblArrivalTime = new JLabel("Arrival Time");
+		lblArrivalTime.setBounds(247, 9, 121, 48);
+		lblArrivalTime.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblArrivalTime);
+		
+		JLabel lblFares = new JLabel("Fare");
+		lblFares.setBounds(368, 9, 121, 48);
+		lblFares.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblFares);
+		
+		JLabel label_20 = new JLabel("");
+		label_20.setBounds(489, 9, 121, 48);
+		contentPane.add(label_20);
+		
+		JLabel label = new JLabel("07:25");
+		label.setBounds(5, 57, 121, 48);
+		label.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label);
+		
+		JLabel lblNewLabel_1 = new JLabel("2 hrs 11 min");
+		lblNewLabel_1.setBounds(126, 57, 121, 48);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel label_1 = new JLabel("09:36");
+		label_1.setBounds(247, 57, 121, 48);
+		label_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("\u20B9 3691");
+		lblNewLabel_2.setBounds(368, 57, 121, 48);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblNewLabel_2);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("");
+		rdbtnNewRadioButton.setBounds(489, 57, 121, 48);
+		rdbtnNewRadioButton.setForeground(new Color(0, 0, 0));
+		contentPane.add(rdbtnNewRadioButton);
+		
+		JLabel label_2 = new JLabel("08:15");
+		label_2.setBounds(5, 105, 121, 48);
+		label_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_2);
+		
+		JLabel lblHrs = new JLabel("9 hrs 40 min");
+		lblHrs.setBounds(126, 105, 121, 48);
+		lblHrs.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHrs);
+		
+		JLabel label_3 = new JLabel("18:00");
+		label_3.setBounds(247, 105, 121, 48);
+		label_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_3);
+		
+		JLabel label_4 = new JLabel("\u20B9 14791");
+		label_4.setBounds(368, 105, 121, 48);
+		label_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_4);
+		
+		JRadioButton radioButton = new JRadioButton("");
+		radioButton.setBounds(489, 105, 121, 48);
+		contentPane.add(radioButton);
+		
+		JLabel label_5 = new JLabel("11:10");
+		label_5.setBounds(5, 153, 121, 48);
+		label_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_5);
+		
+		JLabel lblHr = new JLabel("1 hr 20 min");
+		lblHr.setBounds(126, 153, 121, 48);
+		lblHr.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHr);
+		
+		JLabel label_6 = new JLabel("12:30");
+		label_6.setBounds(247, 153, 121, 48);
+		label_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_6);
+		
+		JLabel label_7 = new JLabel("\u20B9 3796");
+		label_7.setBounds(368, 153, 121, 48);
+		label_7.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_7);
+		
+		JRadioButton radioButton_1 = new JRadioButton("");
+		radioButton_1.setBounds(489, 153, 121, 48);
+		contentPane.add(radioButton_1);
+		
+		JLabel label_8 = new JLabel("13:35");
+		label_8.setBounds(5, 201, 121, 48);
+		label_8.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_8);
+		
+		JLabel label_9 = new JLabel("18:00");
+		label_9.setBounds(247, 201, 121, 48);
+		label_9.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_9);
+		
+		JRadioButton radioButton_2 = new JRadioButton("");
+		radioButton_2.setBounds(489, 201, 121, 48);
+		contentPane.add(radioButton_2);
+		
+		JLabel label_10 = new JLabel("14:30");
+		label_10.setBounds(5, 249, 121, 48);
+		label_10.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_10);
+		
+		JLabel label_15 = new JLabel("20:30");
+		label_15.setBounds(247, 249, 121, 48);
+		label_15.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_15);
+		
+		JRadioButton radioButton_3 = new JRadioButton("");
+		radioButton_3.setBounds(489, 249, 121, 48);
+		contentPane.add(radioButton_3);
+		
+		JLabel label_11 = new JLabel("17:15");
+		label_11.setBounds(5, 297, 121, 48);
+		label_11.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_11);
+		
+		JLabel label_16 = new JLabel("18:50");
+		label_16.setBounds(247, 297, 121, 48);
+		label_16.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_16);
+		
+		JRadioButton radioButton_4 = new JRadioButton("");
+		radioButton_4.setBounds(489, 297, 121, 48);
+		contentPane.add(radioButton_4);
+		
+		JLabel label_12 = new JLabel("19:30");
+		label_12.setBounds(5, 345, 121, 48);
+		label_12.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_12);
+		
+		JLabel label_17 = new JLabel("20:35");
+		label_17.setBounds(247, 345, 121, 48);
+		label_17.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_17);
+		
+		JRadioButton radioButton_5 = new JRadioButton("");
+		radioButton_5.setBounds(489, 345, 121, 48);
+		contentPane.add(radioButton_5);
+		
+		JLabel label_13 = new JLabel("20:25");
+		label_13.setBounds(5, 393, 121, 48);
+		label_13.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_13);
+		
+		JLabel lblnextDay = new JLabel("07:30(Next Day)");
+		lblnextDay.setBounds(247, 393, 121, 48);
+		lblnextDay.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblnextDay);
+		
+		JRadioButton radioButton_6 = new JRadioButton("");
+		radioButton_6.setBounds(489, 393, 121, 48);
+		contentPane.add(radioButton_6);
+		
+		JLabel label_14 = new JLabel("21:35");
+		label_14.setBounds(5, 441, 121, 48);
+		label_14.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_14);
+		
+		JLabel lblnextDay_1 = new JLabel("07:30(Next Day)");
+		lblnextDay_1.setBounds(247, 441, 121, 48);
+		lblnextDay_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblnextDay_1);
+		
+		JRadioButton radioButton_7 = new JRadioButton("");
+		radioButton_7.setBounds(489, 441, 121, 48);
+		contentPane.add(radioButton_7);
+		
+		JButton btnNewButton = new JButton("Book Flight");
+		btnNewButton.setBounds(209, 524, 166, 55);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				//JOptionPane.showMessageDialog("Please Wait...");
+				//create object
+				Final f=new details();
+				f.setVisible(true); 
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		contentPane.add(btnNewButton);
+		
+		JLabel label_33 = new JLabel("\u20B9 9256");
+		label_33.setBounds(368, 201, 121, 48);
+		label_33.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_33);
+		
+		JLabel lblHr_1 = new JLabel("4 hr 25 min");
+		lblHr_1.setBounds(126, 201, 121, 48);
+		lblHr_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHr_1);
+		
+		JLabel label_35 = new JLabel("1 hr 20 min");
+		label_35.setBounds(126, 249, 121, 48);
+		label_35.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_35);
+		
+		JLabel lblHr_2 = new JLabel("1 hr 35 min");
+		lblHr_2.setBounds(126, 297, 121, 48);
+		lblHr_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHr_2);
+		
+		JLabel lblHr_3 = new JLabel("1 hr 5 min");
+		lblHr_3.setBounds(126, 345, 121, 48);
+		lblHr_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHr_3);
+		
+		JLabel lblHrs_2 = new JLabel("11 hrs 5 min");
+		lblHrs_2.setBounds(126, 393, 121, 48);
+		lblHrs_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHrs_2);
+		
+		JLabel lblHrs_1 = new JLabel("9 hrs 55 min");
+		lblHrs_1.setBounds(126, 441, 121, 48);
+		lblHrs_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(lblHrs_1);
+		
+		JLabel label_22 = new JLabel("\u20B9 4673");
+		label_22.setBounds(368, 249, 121, 48);
+		label_22.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_22);
+		
+		JLabel label_41 = new JLabel("\u20B9 3691");
+		label_41.setBounds(368, 297, 121, 48);
+		label_41.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_41);
+		
+		JLabel label_42 = new JLabel("\u20B9 3691");
+		label_42.setBounds(368, 345, 121, 48);
+		label_42.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_42);
+		
+		JLabel label_43 = new JLabel("\u20B9 4673");
+		label_43.setBounds(368, 393, 121, 48);
+		label_43.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_43);
+		
+		JLabel label_44 = new JLabel("\u20B9 4673");
+		label_44.setBounds(368, 441, 121, 48);
+		label_44.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		contentPane.add(label_44);
+		
+		
+	}
+}

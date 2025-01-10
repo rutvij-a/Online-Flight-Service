@@ -1,0 +1,164 @@
+package project;
+
+import java.awt.EventQueue;
+import javax.swing.*; 
+import java.awt.*; 
+import java.awt.event.*; 
+import java.io.*; 
+
+import javax.swing.JFrame;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Color;
+import com.toedter.calendar.JDateChooser;
+
+public class Project {
+
+	private JFrame frame;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				try 
+				{
+					Project window = new Project();
+					window.frame.setVisible(true);
+				} 
+				catch (Exception e) 
+				{
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Project() {
+		initialize();
+	}	
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(240, 255, 240));
+		frame.getContentPane().setForeground(Color.WHITE);
+		frame.setBounds(100, 100, 631, 513);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblWelcomeToAirline = new JLabel("Welcome to Airline Service");
+		lblWelcomeToAirline.setForeground(Color.BLUE);
+		lblWelcomeToAirline.setFont(new Font("Tahoma", Font.BOLD, 23));
+		lblWelcomeToAirline.setBounds(156, 11, 328, 39);
+		frame.getContentPane().add(lblWelcomeToAirline);
+		
+		JLabel lblFrom = new JLabel("From:");
+		lblFrom.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblFrom.setBounds(37, 104, 69, 29);
+		frame.getContentPane().add(lblFrom);
+				
+		String s1[]= {"","Mumbai",};
+		String s2[]= {"","Chennai",};
+		JComboBox comboBox = new JComboBox(s1);
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		comboBox.setBounds(116, 104, 121, 29);
+		frame.getContentPane().add(comboBox);
+		
+		JLabel lblTo = new JLabel("To:");
+		lblTo.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblTo.setBounds(369, 104, 46, 29);
+		frame.getContentPane().add(lblTo);
+		
+		JComboBox comboBox_1 = new JComboBox(s2);
+		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		comboBox_1.setBounds(425, 104, 121, 29);
+		frame.getContentPane().add(comboBox_1);
+		
+		JLabel lblDeprtureDate = new JLabel("Deprture Date:");
+		lblDeprtureDate.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblDeprtureDate.setBounds(37, 167, 121, 29);
+		frame.getContentPane().add(lblDeprtureDate);
+		
+		JLabel lblPassangers = new JLabel("Passangers:");
+		lblPassangers.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblPassangers.setBounds(369, 167, 98, 29);
+		frame.getContentPane().add(lblPassangers);
+		
+		JLabel lblClass = new JLabel("Class:");
+		lblClass.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblClass.setBounds(37, 243, 80, 29);
+		frame.getContentPane().add(lblClass);
+		
+		String s3[]= {"","Economy","Premium Economy","Business"};
+		JComboBox comboBox_2 = new JComboBox(s3);
+		comboBox_2.setBounds(116, 243, 121, 29);
+		frame.getContentPane().add(comboBox_2);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(477, 170, 106, 29);
+		frame.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
+		
+		JButton btnSearchFlights = new JButton("Search Flights");
+		btnSearchFlights.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnSearchFlights.setForeground(Color.BLACK);
+		btnSearchFlights.setBackground(Color.WHITE);
+		btnSearchFlights.setBounds(231, 414, 144, 39);
+		frame.getContentPane().add(btnSearchFlights);
+		
+		JDateChooser dateChooser = new JDateChooser();
+		dateChooser.setBounds(169, 167, 106, 29);
+		frame.getContentPane().add(dateChooser);
+		
+		btnSearchFlights.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+				String s1=comboBox.getSelectedItem()+"";
+				String s2=comboBox_1.getSelectedItem()+"";
+				String s3=dateChooser.getDate()+"";
+				String s4=textField_1.getText()+"";
+				String s5=comboBox_2.getSelectedItem()+"";
+				
+				if(e.getSource()==btnSearchFlights)
+				{
+					try
+					{
+						FileWriter w = new FileWriter("Flight Details.csv",true); 
+						w.write(s1+"\r\n"); 
+						w.write(s2+"\r\n"); 
+						w.write(s3+"\r\n"); 
+						w.write(s4+"\r\n"); 
+						w.write(s5+"\r\n"); 
+						w.close(); 
+					}
+					catch(Exception ae)
+					{
+						System.out.println(ae); 
+					}
+					JOptionPane.showMessageDialog(frame,"Loadng Best Fares...\nPlease Wait...");
+					//create object
+					details dt=new details();
+					dt.setVisible(true);					
+				}
+								 
+			}
+		});
+	}
+	
+}
