@@ -10,8 +10,8 @@ The Online Flight Booking System is a Java-based application that allows users t
 - Database: Microsoft Excel
 
 **⚙️ Installation & Setup**
-  1️⃣ Clone the Repository
-    git clone https://github.com/yourusername/flight-booking-system.git cd flight-booking-system
+  - Clone the Repository
+      - git clone https://github.com/yourusername/flight-booking-system.git cd flight-booking-system
 
 **📸 Screenshots**
 
@@ -26,10 +26,10 @@ The Online Flight Booking System is a Java-based application that allows users t
  ![Message 5](https://github.com/user-attachments/assets/5d959016-a6b2-4e5c-b4d3-a71329f71111)
 
 **💡 Future Enhancements**
- 🔹 Flight Price Prediction using Machine Learning
- 🔹 Multi-Currency Payment Options
- 🔹 Chatbot Support for Customer Queries
+ - 🔹 Flight Price Prediction using Machine Learning
+ - 🔹 Multi-Currency Payment Options
+ - 🔹 Chatbot Support for Customer Queries
 
 
 **📜 License**
-This project is licensed under MIT License.
+This project is licensed under Apache License 2.0.
