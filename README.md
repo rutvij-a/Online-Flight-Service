@@ -1,9 +1,9 @@
 # ✈️ Online-Flight-Service
- 📌 Project Overview
+** 📌 Project Overview**
 The Online Flight Booking System is a Java-based application that allows users to search, book, and manage flight reservations. The system provides real-time flight availability, user authentication, booking confirmations, and payment processing.
 
 **🎯 Features**
-  ✅ Flight Search & Filters (Date, Destination, Price)
+  - ✅ Flight Search & Filters (Date, Destination, Price)
 
 **🛠️ Technologies Used**
 - Programming Language: Java
@@ -11,7 +11,7 @@ The Online Flight Booking System is a Java-based application that allows users t
 
 **⚙️ Installation & Setup**
   - Clone the Repository
-      - git clone https://github.com/rutvij-a/Online-Flight-Service.git cd flight-booking-system
+      - git clone https://github.com/rutvij-a/Online-Flight-Service.git
 
 **📸 Screenshots**
 
