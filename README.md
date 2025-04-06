@@ -11,7 +11,7 @@ The Online Flight Booking System is a Java-based application that allows users t
 
 **⚙️ Installation & Setup**
   - Clone the Repository
-      - git clone https://github.com/yourusername/flight-booking-system.git cd flight-booking-system
+      - git clone https://github.com/rutvij-a/Online-Flight-Service.git cd flight-booking-system
 
 **📸 Screenshots**
 
