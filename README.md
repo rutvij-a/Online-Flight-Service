@@ -4,7 +4,8 @@
   The Online Flight Booking System is a Java-based application that allows users to search, book, and manage flight reservations. The system provides real-time flight availability, user authentication, booking confirmations, and payment processing.
 
 **🎯 Features**
-  - ✅ Flight Search & Filters (Date, Destination, Price)
+  
+   ✅ Flight Search & Filters (Date, Destination, Price)
 
 **🛠️ Technologies Used**
 - Programming Language: Java
@@ -33,4 +34,5 @@
 
 
 **📜 License**
+
 This project is licensed under Apache License 2.0.
